@@ -23,7 +23,7 @@ $headers .= "From: $name <$email>\r\n";
 $headers .= "Reply-To: $email\r\n"; 
 
 
-if((!$email)&&(!$name)){ //Проверка отправилось ли наше поля name и не пустые ли они
+if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['email'])&&$_POST['email']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
 $result = mail($to,$subject,$message,$headers);
 // echo "<center><b>Спасибо за отправку Вашего сообщения. <br><br> Для меня это очень важно! <br><br> В ближайшее время Вы обязательно получите ответ.";
 // exit;
