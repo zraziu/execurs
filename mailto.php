@@ -23,14 +23,16 @@ $headers .= "From: $name <$email>\r\n";
 $headers .= "Reply-To: $email\r\n"; 
 
 
-$result = 0;
 if((!$email)&&(!$name)){ //Проверка отправилось ли наше поля name и не пустые ли они
-$result = mail($to,$subject,$message,$headers) or print "Не могу отправить письмо !!!";
+$result = mail($to,$subject,$message,$headers);
 // echo "<center><b>Спасибо за отправку Вашего сообщения. <br><br> Для меня это очень важно! <br><br> В ближайшее время Вы обязательно получите ответ.";
 // exit;
 	if ($result){
         echo "Cообщение успешно отправленно.";
     }
+	else {
+		echo "Не могу отправить письмо !!!";
+	}
 }
 
 
