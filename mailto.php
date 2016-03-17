@@ -26,10 +26,10 @@ $headers .= "Reply-To: $email\r\n";
 if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['email'])&&$_POST['email']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
 	$result = mail($to,$subject,$message,$headers);
 	if ($result){
-        echo "Cообщение успешно отправленно.";
+        echo '<center><p class="success">Спасибо за отправку вашего сообщения!</p></center>';
     }
 	else {
-		echo "Не могу отправить письмо !!!";
+		echo '<center><p class="fail"><b>Ошибка. Сообщение не отправлено!</b></p></center>';
 	}
 }
 
