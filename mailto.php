@@ -7,6 +7,10 @@ $text = $_POST['text'];
 $url = $_POST['url'];
 $range = $_POST['range'];
 
+ if (!$email) {
+	 $email = "no-replay@parusvlg.ru";
+ }
+
 
 $to = "rom-kor@mail.ru";
 $subject = "Сообщение с сайта ParusVlg";
