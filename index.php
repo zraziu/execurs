@@ -79,7 +79,7 @@
             </div>
 
          			 <!-- Форма заявки -->
-                      <form  class="form-horizontal" method="post" id="id_form" oninput="out.value=range.value">
+                      <form  class="form-horizontal" method="post" id="form" oninput="out.value=range.value">
                         <div class="form-group">
                         <label class="control-label col-xs-3" for="lastName">Ваши контакты:</label>
                         <div class="col-xs-9">

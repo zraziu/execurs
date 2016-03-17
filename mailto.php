@@ -24,8 +24,8 @@ $headers .= "Reply-To: $email\r\n";
 
 
 if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['email'])&&$_POST['email']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-	$result = mail($to,$subject,$message,$headers);
-	if ($result){
+	$send = mail($to,$subject,$message,$headers);
+	if ($send){
         echo '<center><p class="success">Спасибо за отправку вашего сообщения!</p></center>';
     }
 	else {
