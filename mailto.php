@@ -1,8 +1,6 @@
 ﻿<?php
-if (isset($_POST['email'])) {$email = $_POST['email']; }
-else {$email = "no-replay@parusvlg.ru";}
-
-//$email = $_POST['email'];
+if (isset($_POST['email'])) {$email = $_POST['email']; } // проверяем есть ли mail
+else {$email = "no-replay@parusvlg.ru";} // указываем mail по умолчанию
 $tel = $_POST['tel'];
 $date = $_POST['date'];
 $name = $_POST['name'];
@@ -10,7 +8,6 @@ $text = $_POST['text'];
 $url = $_POST['url'];
 $range = $_POST['range'];
 
-// if (!$email) {	 $email = "no-replay@parusvlg.ru"; }
 
 
 $to = "rom-kor@mail.ru";
