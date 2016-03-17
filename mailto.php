@@ -24,22 +24,14 @@ $headers .= "Reply-To: $email\r\n";
 
 
 if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['email'])&&$_POST['email']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
-$result = mail($to,$subject,$message,$headers);
-// echo "<center><b>Спасибо за отправку Вашего сообщения. <br><br> Для меня это очень важно! <br><br> В ближайшее время Вы обязательно получите ответ.";
-// exit;
-	if ($result){
-        echo "Cообщение успешно отправленно.";
+	$result = mail($to,$subject,$message,$headers);
+	if (!$result){
+        echo "Не могу отправить письмо !!!";
     }
 	else {
-		echo "Не могу отправить письмо !!!";
+		echo "Cообщение успешно отправленно.";
 	}
 }
 
 
-// if (text == "success") {
-            //скрыть форму обратной связи
-//            $('#messageForm').hide();
-            //удалить у элемент, имеющего id msgSubmit, класс hidden
- //           $('#msgSubmit').removeClass('hidden');
- //         }
 ?>
