@@ -160,6 +160,9 @@ $(document).ready(function(){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://parusvlg.ru/wp-content/themes/mBr/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Подключаем джава для формы обратной связи -->
+        <script src="http://parusvlg.ru/wp-content/themes/mBr/bootstrap/js/scripts.js"></script>
+
 
     
   </body>
