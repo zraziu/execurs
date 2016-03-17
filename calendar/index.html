@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="build/kalendae.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="skins/css/metal.css" type="text/css">
+	<script src="build/kalendae.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" media="screen">
+		.kalendae .k-days span.closed {
+			background:red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Kalendae</h1>
+	<p>Range Select</p>	 
+	<script type="text/javascript" charset="utf-8"> /* github.com/ChiperSoft/Kalendae - календарь */
+		new Kalendae({
+			attachTo:document.body,
+			months:3, /* кол-во мес для отображения */
+			mode:'range', /* single - одна дата, multiple - несколько, range - несколько подряд */
+			useYearNav: false,
+			selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+		});
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="kalendae.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="metal.css" type="text/css">
+	<script src="kalendae.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="auto-kal" data-kal="months: 3, direction: 'future', mode: 'range'"></div>
+----
+
+<input type="text" class="auto-kal" data-kal="months: 3, direction: 'future', mode: 'range'">
+-----
+
+
+	<script> /* github.com/ChiperSoft/Kalendae - календарь */
+		new Kalendae({
+			attachTo:document.body,
+			months:3, /* кол-во мес для отображения */
+			mode:'range', /* single - одна дата, multiple - несколько, range - несколько подряд */
+			selected:[Kalendae.moment().subtract({M:1}), Kalendae.moment().add({M:1})]
+		});
+		
+	</script>
+</body>
+</html>
