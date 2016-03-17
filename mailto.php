@@ -1,5 +1,8 @@
 ﻿<?php
-$email = $_POST['email'];
+if (isset($_POST['email'])) {$email = $_POST['email']; }
+else {$email = "no-replay@parusvlg.ru";}
+
+//$email = $_POST['email'];
 $tel = $_POST['tel'];
 $date = $_POST['date'];
 $name = $_POST['name'];
@@ -7,9 +10,7 @@ $text = $_POST['text'];
 $url = $_POST['url'];
 $range = $_POST['range'];
 
- if (!$email) {
-	 $email = "no-replay@parusvlg.ru";
- }
+// if (!$email) {	 $email = "no-replay@parusvlg.ru"; }
 
 
 $to = "rom-kor@mail.ru";
@@ -30,7 +31,7 @@ $headers .= "Reply-To: $email\r\n";
 // if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['email'])&&$_POST['email']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
 	$send = mail($to,$subject,$message,$headers);
 	if ($send){
-        echo '<center><p class="success">Спасибо за отправку вашего сообщения!</p></center>';
+        echo '<center><p class="success">Спасибо за отправку вашего сообщения!</p></center><br>';
     }
 	else {
 		echo '<center><p class="fail"><b>Ошибка. Сообщение не отправлено!</b></p></center>';
