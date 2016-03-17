@@ -83,7 +83,7 @@
                         <div class="form-group">
                         <label class="control-label col-xs-3" for="lastName">Ваши контакты:</label>
                         <div class="col-xs-9">
-                          <input type="email" name="email" class="form-control" placeholder="Ваш e-mail" required>
+                          <input type="email" name="email" class="form-control" placeholder="Ваш e-mail">
                           <input type="tel" name="tel" class="form-control" placeholder="Ваш телефон">
                         </div>
                       </div>
